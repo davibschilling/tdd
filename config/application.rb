@@ -27,6 +27,18 @@ module Tdd
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
+    config.generators do |g|
+        g.orm             :active_record
+        g.template_engine :erb
+        g.test_framework  :rspec,
+            fixture: false,
+            view_specs: false,
+            helper_specs: false,
+            routing_specs: false
+        g.stylesheets     false
+        g.javascript      false
+    end
+
     # Don't generate system test files.
     config.generators.system_tests = nil
   end

@@ -25,8 +25,8 @@ development:
   <<: *default
   database: tdd_development
   host: localhost
-  username: dsn3
-  password: dsn3
+  username: postgres
+  password: fryssa0810513
 
 
   # The specified database role being used to connect to postgres.
@@ -62,6 +62,9 @@ development:
 test:
   <<: *default
   database: tdd_test
+  host: localhost
+  username: postgres
+  password: fryssa0810513
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
